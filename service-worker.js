@@ -4,8 +4,8 @@ self.addEventListener('install', function (event) {
 		caches.open('v1').then(function (cache) {
 			console.log('Opened cache');
 			return cache.addAll([
-				'/style.css',
-				'/index.html',
+				'./style.css',
+				'./index.html',
 				// Add additional resources here
 			]);
 		})
