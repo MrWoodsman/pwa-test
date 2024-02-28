@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <title>Hello World Web</title>
     <meta name="description" content="Jest to strona testująca możliwości stron PWA" />
@@ -23,6 +23,10 @@
         <p>Witaj na stronie z możliwością zainstalowania tak zwane PWA</p>
     </div>
 </body>
-<script src="service-worker.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("/service-worker.js")
+    }
+</script>
 
 </html>
